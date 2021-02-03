@@ -1,12 +1,14 @@
 <template>
-<div>Hello from Nantes</div>
-<div v-for="thread in threads" :key="thread.id">
-  <h2>{{thread.title}}</h2>
-  <div v-for="postId in thread.posts" :key="postId">
-    <p>{{userById(postById(postId).userId).name}}</p>
-    <p>{{postById(postId).text}}</p>
+<div>
+  <div v-for="thread in threads" :key="thread.id">
+    <h2>{{thread.title}}</h2>
+    <div v-for="postId in thread.posts" :key="postId">
+      <p>{{userById(postById(postId).userId).name}}</p>
+      <p>{{postById(postId).text}}</p>
+    </div>
   </div>
 </div>
+
 </template>
 
 <script>
